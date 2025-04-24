@@ -1,3 +1,5 @@
+namespace GerenciamentoBibliotecaApi.Models;
+
 public class Estoque
 {
     public int Id { get; set; }
