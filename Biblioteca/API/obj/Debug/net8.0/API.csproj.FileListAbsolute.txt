@@ -332,3 +332,8 @@ C:/Users/Kabum/OneDrive/Desktop/TrabalhoTopicos/Biblioteca/API/obj/Debug/net8.0/
 /home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/obj/Debug/net8.0/API.pdb
 /home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/obj/Debug/net8.0/API.genruntimeconfig.cache
 /home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/obj/Debug/net8.0/ref/API.dll
+/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/obj/Debug/net8.0/API.MvcApplicationPartsAssemblyInfo.cs

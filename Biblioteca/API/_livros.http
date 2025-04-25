@@ -21,7 +21,7 @@ PUT http://localhost:5000/api/livros/12
 Content-Type: application/json
 
 {
-    "Titulo": "Pai rico aaaasdaaaaaaaapai pobre"
+    "Titulo": "Pai rico pai pobre"
 }
 
 ### Remove um livro pelo ID
