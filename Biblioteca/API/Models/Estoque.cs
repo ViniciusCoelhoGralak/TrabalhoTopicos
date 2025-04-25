@@ -1,4 +1,4 @@
-namespace GerenciamentoBibliotecaApi.Models;
+namespace API.Models;
 
 public class Estoque
 {

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LEAL\\Documents\\TrabsonFacul\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj": {}
+    "/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LEAL\\Documents\\TrabsonFacul\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj": {
+    "/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LEAL\\Documents\\TrabsonFacul\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
+        "projectUniqueName": "/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\LEAL\\Documents\\TrabsonFacul\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\LEAL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LEAL\\Documents\\TrabsonFacul\\TrabalhoTopicos\\Biblioteca\\API\\obj\\",
+        "projectPath": "/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/API.csproj",
+        "packagesPath": "/home/leal/.nuget/packages/",
+        "outputPath": "/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LEAL\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/leal/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -54,6 +49,10 @@
               "version": "[9.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[9.0.4, )"
             }
@@ -77,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.114/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

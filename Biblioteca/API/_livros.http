@@ -1,0 +1,13 @@
+### Lista de Livros
+GET http://localhost:5239/api/livros
+
+### Cadastrar Livro
+POST http://localhost:5239/api/livros
+Content-Type: application/json
+
+{
+    "titulo": "O Senhor dos Anéis",
+    "autor": "J.R.R. Tolkien",
+    "dataPublicacao": "1954-07-29T00:00:00",
+    "categoriaId": 1
+}
