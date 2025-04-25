@@ -20,7 +20,7 @@
 1. **Clone o repositório**
 
    ```bash
-   git clone https://github.com/seu-usuario/TrabalhoTopicos.git
+   git clone https://github.com/ViniciusCoelhoGralak/TrabalhoTopicos.git
    cd TrabalhoTopicos
    ```
 
@@ -36,8 +36,6 @@
    ```bash
    dotnet run
    ```
-
-   A aplicação estará disponível em: `https://localhost:5001` ou `http://localhost:5000`.
 
 ## 🗄️ Configuração do Banco de Dados
 
