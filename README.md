@@ -58,10 +58,8 @@ O projeto utiliza SQLite como banco de dados.
 ```
 /TrabalhoTopicos
 │
-├── Controllers/         # Endpoints da API
 ├── Models/              # Entidades do domínio
-├── Data/                # Contexto e acesso ao banco
 ├── Program.cs           # Configuração principal (Minimal API)
 ├── README.md            # Documentação
-└── TrabalhoTopicos.csproj
+└── API.csproj
 ```
