@@ -3186,19 +3186,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kabum\\.nuget\\packages\\": {}
+    "/home/leal/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kabum\\OneDrive\\Desktop\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
+      "projectUniqueName": "/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Kabum\\OneDrive\\Desktop\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\Kabum\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kabum\\OneDrive\\Desktop\\TrabalhoTopicos\\Biblioteca\\API\\obj\\",
+      "projectPath": "/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/API.csproj",
+      "packagesPath": "/home/leal/.nuget/packages/",
+      "outputPath": "/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kabum\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/leal/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3216,11 +3216,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3257,7 +3252,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.114/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

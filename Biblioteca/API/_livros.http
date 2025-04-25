@@ -1,0 +1,28 @@
+### Listar todos os livros:
+
+GET http://localhost:5000/api/livros
+
+#### Listar livro pelo Id:
+GET http://localhost:5000/api/livros/12
+
+
+### Cadastrar Livro novo### Cadastrar Livro novo
+POST http://localhost:5000/api/livros
+Content-Type: application/json
+
+{
+    "Titulo": "Harry Potter e a Camara Secreta",
+    "AnoPublicacao": 2002,
+    "CategoriaId": 3
+}
+
+### Atualiza os dados do Livro
+PUT http://localhost:5000/api/livros/12
+Content-Type: application/json
+
+{
+    "Titulo": "Pai rico aaaasdaaaaaaaapai pobre"
+}
+
+### Remove um livro pelo ID
+DELETE  http://localhost:5000/api/livros/15

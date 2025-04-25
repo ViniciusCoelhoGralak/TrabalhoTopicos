@@ -1,0 +1,5 @@
+### Lista de Categorias
+GET http://localhost:5000/api/categorias
+
+### Buscar Categorias por Id
+GET http://localhost:5000/api/categorias/2

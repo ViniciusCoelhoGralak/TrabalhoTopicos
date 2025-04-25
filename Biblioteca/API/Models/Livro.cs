@@ -7,5 +7,5 @@ public class Livro {
 
     public int CategoriaId { get; set;}
 
-    required public Categoria Categoria { get; set;}
+    public Categoria? Categoria { get; set;}
 }
