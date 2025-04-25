@@ -65,15 +65,3 @@ O projeto utiliza SQLite como banco de dados.
 ├── README.md            # Documentação
 └── TrabalhoTopicos.csproj
 ```
-
-## 📬 Como Contribuir
-
-1. Fork este repositório
-2. Crie uma branch: `git checkout -b minha-feature`
-3. Faça commit das suas alterações: `git commit -m 'Minha nova feature'`
-4. Push na sua branch: `git push origin minha-feature`
-5. Abra um Pull Request
-
-## 📄 Licença
-
-Este projeto é apenas para fins educacionais e não possui uma licença oficial.
