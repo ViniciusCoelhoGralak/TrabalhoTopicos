@@ -1,26 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+//1 - Um componente SEMPRE deve começar com a primeira letra
+//maiúscula
+//2 - Todo componente DEVE ser uma função do JS
+//3 - Todo deve retornar apenas UM elemento HTML
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Projeto base em React com TypeScript</h1>
     </div>
   );
 }
-
+//4 - OBRIGATORIAMENTE o componente DEVE ser exportado
 export default App;

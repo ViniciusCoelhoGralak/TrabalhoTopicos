@@ -3600,19 +3600,19 @@
     ]
   },
   "packageFolders": {
-    "/home/leal/.nuget/packages/": {}
+    "C:\\Users\\viel3\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/API.csproj",
+      "projectUniqueName": "C:\\Users\\viel3\\Documents\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/API.csproj",
-      "packagesPath": "/home/leal/.nuget/packages/",
-      "outputPath": "/home/leal/Documentos/TrabalhoTopicos/Biblioteca/API/obj/",
+      "projectPath": "C:\\Users\\viel3\\Documents\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\viel3\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\viel3\\Documents\\TrabalhoTopicos\\Biblioteca\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/leal/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\viel3\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3630,6 +3630,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3670,7 +3675,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.114/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
