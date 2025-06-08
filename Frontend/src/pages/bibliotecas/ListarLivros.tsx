@@ -55,6 +55,15 @@ function ListarLivros() {
                             <td>{livros.anoPublicacao}</td>
                             <td>{livros.categoriaId}</td>
                             <td>{livros.categoria.nome}</td>
+                            <td>
+                                <button className="remover"
+                                        onClick={() => remover(livros.id)}>
+                                    Remover
+                                </button>
+                                <Link to={`/pages/livros/alterar/${livros.id}`}>
+                                    Alterar
+                                </Link>
+                            </td>
                         </tr>
                     ))}
                 </tbody>

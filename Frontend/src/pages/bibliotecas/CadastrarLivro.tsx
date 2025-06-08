@@ -23,14 +23,16 @@ function CadastrarLivro() {
 
         axios.get(`http://localhost:5000/api/livros/${id}`)
         .then( response =>{
-            var produto = response.data;
-            setTitulo(produto.nome);
-            setAnoPublicacao(produto.preco);
-            setCategoriaId(produto.descricao);
+            var livro = response.data;
+            setTitulo(livro.titulo);
+            setAnoPublicacao(livro.anoPublicacao);
+            setCategoriaId(livro.categoriaId);
+            setCategorias(livro.categorias);
         })
+
         .catch( (error) => {
             console.log(error)
-            alert("Erro ao carregar o produto");
+            alert("Erro ao carregar o livro");
         });
     }
 
@@ -43,6 +45,44 @@ function CadastrarLivro() {
         .catch( () => {
             alert("Erro ao carregar as categorias");
         });
+    }
+
+    function salvar (e: any) {
+        e.preventDefault();
+        const p = {
+            titulo: titulo,
+            anoPublicacao: Number(anoPublicacao),
+            categoriaId: categoriaId,
+            categorias: categorias,
+        }
+        
+        if (id == null) {
+            cadastrar(p);
+        } else {
+            alterar(id, p);
+        }
+    }
+
+    function cadastrar(livro: any) {
+        axios.post("http://localhost:5000/api/livros", livro)
+        .then(response => {
+            console.log(response);
+            alert("Livro cadastrado com sucessor");
+        })
+        .catch( error => {
+            alert("Ocorreu um erro ao cadastrar o livro");
+        })
+    }
+
+    function alterar(id: any, livro: any) {
+        axios.put(`http://localhost:5291/api/livro/${id}`, livro)
+        .then(response => {
+            console.log(response);
+            alert("Livro alterado com sucessor");
+        })
+        .catch( error => {
+            alert("Ocorreu um erro ao alterar o livro");
+        })
     }
     
 }
