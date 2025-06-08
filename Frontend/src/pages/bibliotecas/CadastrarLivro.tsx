@@ -28,7 +28,6 @@ function CadastrarLivro() {
             setTitulo(livro.titulo);
             setAnoPublicacao(livro.anoPublicacao);
             setCategoriaId(livro.categoriaId);
-            setCategorias(livro.categorias);
         })
 
         .catch( (error) => {
@@ -54,7 +53,6 @@ function CadastrarLivro() {
             titulo: titulo,
             anoPublicacao: Number(anoPublicacao),
             categoriaId: categoriaId,
-            categorias: categorias,
         }
         
         if (id == null) {
@@ -68,7 +66,7 @@ function CadastrarLivro() {
         axios.post("http://localhost:5000/api/livros", livro)
         .then(response => {
             console.log(response);
-            alert("Livro cadastrado com sucessor");
+            alert("Livro cadastrado com sucesso");
         })
         .catch( error => {
             alert("Ocorreu um erro ao cadastrar o livro");
@@ -79,7 +77,7 @@ function CadastrarLivro() {
         axios.put(`http://localhost:5000/api/livros/${id}`, livro)
         .then(response => {
             console.log(response);
-            alert("Livro alterado com sucessor");
+            alert("Livro alterado com sucesso");
         })
         .catch( error => {
             alert("Ocorreu um erro ao alterar o livro");

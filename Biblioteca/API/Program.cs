@@ -97,13 +97,16 @@ app.MapPut("/api/livros/{id}", ([FromRoute] int id,
 {
     Livro? entidade = ctx.Livros.Find(id);
 
-
     if (livro.Titulo == null || livro.Titulo.Length < 3)
     {
         return Results.BadRequest("O nome do livro deve ter mais de 3 letras");
     }
 
+    // Atualiza todos os campos relevantes
     entidade.Titulo = livro.Titulo;
+    entidade.AnoPublicacao = livro.AnoPublicacao;
+    entidade.CategoriaId = livro.CategoriaId;
+
     ctx.Livros.Update(entidade);
     ctx.SaveChanges();
     return Results.Ok(ctx.Livros.Include(l => l.Categoria).FirstOrDefault(l => l.Id == id));

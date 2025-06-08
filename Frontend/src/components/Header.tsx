@@ -6,15 +6,17 @@ function Header() {
     return (
         <header>
             <nav className="navbar">
-                <div className="logo">Produtos</div>
+                <div className="logo">Biblioteca</div>
                     <ul className="nav-links">
                         <li>
-                            <Link to="/pages/produtos/listar">
+                            <Link to="/pages/livros/listar">
                                 Lista de Livros
                             </Link>
                         </li>
                         <li>
-                            
+                            <Link to="/pages/livros/cadastrar">
+                                Cadastrar um Livro
+                            </Link>
                         </li>
                     </ul>
                 </nav>
