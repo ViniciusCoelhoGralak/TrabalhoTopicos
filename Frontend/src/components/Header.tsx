@@ -9,7 +9,7 @@ function Header() {
                 <div className="logo">Produtos</div>
                     <ul className="nav-links">
                         <li>
-                            <Link to="/pages/livros/listar">
+                            <Link to="/pages/produtos/listar">
                                 Lista de Livros
                             </Link>
                         </li>

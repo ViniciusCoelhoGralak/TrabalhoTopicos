@@ -28,10 +28,21 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+builder.Services.AddCors(options =>
+    options.AddPolicy("Acesso Total",
+        configs => configs
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod())
+);
+
 var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
+
+// Ativa o CORS para permitir requisições do frontend
+app.UseCors("Acesso Total");
 
 
 /////////////// LIVROS /////////////////

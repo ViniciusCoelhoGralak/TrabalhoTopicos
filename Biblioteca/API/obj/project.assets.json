@@ -3600,19 +3600,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\viel3\\.nuget\\packages\\": {}
+    "C:\\Users\\LEAL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\viel3\\Documents\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\LEAL\\Documents\\Projects\\aaa\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\viel3\\Documents\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\viel3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\viel3\\Documents\\TrabalhoTopicos\\Biblioteca\\API\\obj\\",
+      "projectPath": "C:\\Users\\LEAL\\Documents\\Projects\\aaa\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\LEAL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LEAL\\Documents\\Projects\\aaa\\TrabalhoTopicos\\Biblioteca\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\viel3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\LEAL\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3675,7 +3675,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
