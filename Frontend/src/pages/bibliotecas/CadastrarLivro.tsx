@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Categoria } from '../../models/Categoria';
+import './cadastrar-livro-modulo.css';
 
 function CadastrarLivro() {
     const { id } = useParams();
@@ -75,7 +76,7 @@ function CadastrarLivro() {
     }
 
     function alterar(id: any, livro: any) {
-        axios.put(`http://localhost:5291/api/livro/${id}`, livro)
+        axios.put(`http://localhost:5000/api/livros/${id}`, livro)
         .then(response => {
             console.log(response);
             alert("Livro alterado com sucessor");
@@ -84,6 +85,54 @@ function CadastrarLivro() {
             alert("Ocorreu um erro ao alterar o livro");
         })
     }
-    
+    return (
+        <div className='cad'>
+            <h1>Cadastrar livro</h1>
+            <form onSubmit={salvar}>
+                <div>
+                    <label htmlFor="titulo">Titulo</label>
+                    <input
+                        onChange={(e: any) => setTitulo(e.target.value)}
+                        value={titulo}
+                        type="text"
+                        id="titulo"
+                        placeholder="Digite o título do Livro"
+                        required/>
+                </div>
+
+
+
+                <div>
+                    <label htmlFor="anoPublicacao">Ano de publicação</label>
+                    <input
+                        onChange={(e: any) => setAnoPublicacao(e.target.value)}
+                        value={anoPublicacao}
+                        type="number"
+                        id="anoPublicacao"
+                        step="1"
+                        placeholder="Digite o ano de publicação do livro"
+                        required/>
+                </div>
+
+
+                <div>
+                    <label htmlFor="categoria">Categoria</label>
+                    <select id="categoria"
+                        onChange={(e: any) => setCategoriaId(e.target.value)}
+                        value={categoriaId} >
+                        {categorias.map( (item) => (
+                            <option key={item.id} value={item.id} >
+                                {item.nome}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                
+                <button type="submit">
+                    Salvar
+                </button>
+            </form>
+        </div>
+    );
 }
 export default CadastrarLivro;

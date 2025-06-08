@@ -15,8 +15,9 @@ function App() {
         
         <Routes>
           <Route path="/" element={<ListarLivros />} />
-          <Route path="/pages/produtos/listar" element={<ListarLivros  />} />
-          <Route path="/pages/produtos/cadastrar" element={<CadastrarLivro />} />
+          <Route path="/pages/livros/listar" element={<ListarLivros  />} />
+          <Route path="/pages/livros/cadastrar" element={<CadastrarLivro />} />
+          <Route path="/pages/livros/alterar/:id" element={<CadastrarLivro />} />
         </Routes>
       </BrowserRouter>
     </div>
