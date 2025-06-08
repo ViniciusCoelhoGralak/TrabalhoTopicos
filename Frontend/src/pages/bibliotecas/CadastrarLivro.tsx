@@ -44,5 +44,6 @@ function CadastrarLivro() {
             alert("Erro ao carregar as categorias");
         });
     }
+    
 }
 export default CadastrarLivro;

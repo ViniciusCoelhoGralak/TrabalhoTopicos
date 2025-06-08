@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen(options =>
         Description = "API para gerenciamento de livros e categorias em uma biblioteca.",
         Contact = new OpenApiContact()
         {
-            Name = "Eduardo Leal | Gabryel Rocha | Vinicius Coelho",
+            Name = "Eduardo Leal | Gabryel Rocha | Vinicius Coelho | Gabriel Barboza",
             Url = new Uri("https://github.com/ViniciusCoelhoGralak/TrabalhoTopicos/")
         },
         License = new OpenApiLicense()

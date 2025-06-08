@@ -1,0 +1,81 @@
+h1 {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Estilo da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho da tabela */
+thead {
+    background-color: #e0e0e0;
+}
+
+thead td {
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Corpo da tabela */
+tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Linhas alternadas */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #ececec;
+}
+
+/* Botões */
+/* Estilo geral dos botões */
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 8px;
+}
+
+/* Botão Remover (vermelho) */
+button.remover {
+    background-color: #e74c3c; /* Vermelho */
+    color: white;
+}
+
+button.remover:hover {
+    background-color: #c0392b; /* Vermelho escuro */
+    transform: translateY(-2px);
+}
+
+button.remover:active {
+    transform: translateY(2px);
+}
+
+/* Botão Alterar (azul) */
+button.alterar {
+    background-color: #2980b9; /* Azul */
+    color: white;
+}
+
+button.alterar:hover {
+    background-color: #1c5980; /* Azul escuro */
+    transform: translateY(-2px);
+}
+
+button.alterar:active {
+    transform: translateY(2px);
+}

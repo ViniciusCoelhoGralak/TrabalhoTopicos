@@ -1,4 +1,8 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
+import Header from "./components/Header";
+import CadastrarLivro from "./pages/bibliotecas/CadastrarLivro";
+import ListarLivros from "./pages/bibliotecas/ListarLivros";
 //1 - Um componente SEMPRE deve começar com a primeira letra
 //maiúscula
 //2 - Todo componente DEVE ser uma função do JS
@@ -6,7 +10,14 @@ import React from "react";
 function App() {
   return (
     <div>
-      <h1>Projeto base em React com TypeScript</h1>
+      <BrowserRouter>
+        <Header />
+        
+        <Routes>
+          <Route path="/" element={<ListarLivros />} />
+          <Route path="/pages/produtos/listar" element={<ListarLivros  />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

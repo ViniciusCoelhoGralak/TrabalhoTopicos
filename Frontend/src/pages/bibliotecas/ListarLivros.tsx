@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 
 import axios from 'axios';
 
-
+import './listar-livro-modulo.css';
 import { Livro} from '../../models/Livro';
 import { Link } from 'react-router-dom';
 
 function ListarLivros() {
-    const [Livros, setLivros] = useState<Livro[]>([]);
+    const [livros, setLivros] = useState<Livro[]>([]);
 
     useEffect(() => {
         carregarLivros();
@@ -23,7 +23,6 @@ function ListarLivros() {
             alert("error");
         });
     }
-
     function remover(id: number) {
         axios.delete(`http://localhost:5000/api/livros/${id}`)
         .then( () => {
@@ -34,5 +33,33 @@ function ListarLivros() {
             alert("Não foi possivel remover o Livro")
         )
     }
+       return (
+        <div>
+            <h1>Lista de Livros</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>Titulo</td>
+                        <td>Ano de Publicação</td>
+                        <td>Categoria ID</td>
+                        <td>Categoria</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {livros.map((livros) => (
+                        <tr key={livros.id}>
+                            <td>{livros.id}</td>
+                            <td>{livros.titulo}</td>
+                            <td>{livros.anoPublicacao}</td>
+                            <td>{livros.categoriaId}</td>
+                            <td>{livros.categoria.nome}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    )
 };
 export default ListarLivros;
