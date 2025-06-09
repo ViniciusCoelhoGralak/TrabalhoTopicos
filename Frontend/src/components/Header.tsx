@@ -9,6 +9,11 @@ function Header() {
                 <div className="logo">Biblioteca</div>
                     <ul className="nav-links">
                         <li>
+                            <Link to="/">
+                                Home
+                            </Link>
+                        </li>
+                        <li>
                             <Link to="/pages/livros/listar">
                                 Lista de Livros
                             </Link>
