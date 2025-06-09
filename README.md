@@ -1,63 +1,104 @@
-# TrabalhoTopicos
+# Projeto Biblioteca - API e Frontend
 
-**TrabalhoTopicos** é uma Web API desenvolvida como parte de um projeto acadêmico. O objetivo é fornecer um backend funcional para gerenciamento de recursos via requisições HTTP, utilizando tecnologias modernas e boas práticas de desenvolvimento.
+**TrabalhoTopicos** é uma aplicação full-stack desenvolvida como parte de um projeto acadêmico. O objetivo é fornecer uma interface para gerenciamento de livros e categorias, com um frontend em React e um backend funcional em .NET para manipulação dos dados.
 
 ## 📌 Tecnologias Utilizadas
 
-- [.NET 8](https://dotnet.microsoft.com/en-us/)
-- [Entity Framework Core](https://learn.microsoft.com/en-us/ef/)
-- [SQLite](https://www.sqlite.org/index.html)
-- C#
-- Minimal API
+* **Backend**: .NET 8 (Minimal API), Entity Framework Core, SQLite
+* **Frontend**: React, TypeScript, Axios
+* **Documentação da API**: Swagger
 
-## ⚙️ Requisitos
+***
 
-- [.NET SDK 8.0+](https://dotnet.microsoft.com/en-us/download)
-- Editor recomendado: [Visual Studio Code](https://code.visualstudio.com/) ou [Visual Studio 2022+](https://visualstudio.microsoft.com/)
+## ⚙️ Pré-requisitos
 
-## 🚀 Como Executar a Aplicação
+Antes de começar, certifique-se de que você tem as seguintes ferramentas instaladas:
 
-1. **Clone o repositório**
+* **.NET 8 SDK** ou superior
+* **Node.js** (versão 16+ recomendada)
+* **npm** (geralmente vem com o Node.js)
+* Um editor de código, como o **Visual Studio Code**
 
-   ```bash
-   git clone https://github.com/ViniciusCoelhoGralak/TrabalhoTopicos.git
-   cd TrabalhoTopicos
-   ```
+***
 
-2. **Restaure os pacotes e compile a aplicação**
+## 🚀 Instruções para Execução do Projeto
 
-   ```bash
-   dotnet restore
-   dotnet build
-   ```
+Para que a aplicação funcione completamente, tanto o backend quanto o frontend precisam estar em execução simultaneamente. Siga os passos abaixo, preferencialmente abrindo dois terminais separados.
 
-3. **Execute a aplicação**
+### 1. Back-end (API)
 
-   ```bash
-   dotnet run
-   ```
+O backend é responsável por toda a lógica de negócio e comunicação com o banco de dados.
 
-## 🗄️ Configuração do Banco de Dados
+1.  **Navegue até a pasta da API:**
+    ```bash
+    cd Biblioteca/API
+    ```
 
-O projeto utiliza SQLite como banco de dados.
+2.  **Restaure as dependências do .NET:**
+    ```bash
+    dotnet restore
+    ```
 
-1. A base será criada automaticamente ao rodar o projeto pela primeira vez.
-2. Caso deseje aplicar migrações manualmente:
+3.  **Aplique as migrações do Entity Framework Core:**
+    Este comando criará o banco de dados `biblioteca.db` e as tabelas necessárias.
+    ```bash
+    dotnet ef database update
+    ```
 
-   ```bash
-   dotnet ef migrations add Inicial
-   dotnet ef database update
-   ```
+4.  **Execute a API:**
+    ```bash
+    dotnet run
+    ```
+    * A API estará disponível em `http://localhost:5000`.
+    * A documentação interativa do Swagger pode ser acessada em `http://localhost:5000/swagger`.
 
-> Obs: Certifique-se de que o pacote `Microsoft.EntityFrameworkCore.Tools` esteja instalado.
+***
+
+### 2. Front-end (React App)
+
+O frontend é a interface com o usuário, consumindo os dados fornecidos pela API.
+
+1.  **(Em um novo terminal)** Navegue até a pasta do frontend:
+    ```bash
+    cd Frontend
+    ```
+
+2.  **Instale as dependências do Node.js:**
+    Este comando instalará todas as bibliotecas necessárias para o projeto, como React, Axios, etc.
+    ```bash
+    npm install
+    ```
+
+3.  **Execute a aplicação React:**
+    ```bash
+    npm start
+    ```
+    * O site será aberto automaticamente no seu navegador no endereço `http://localhost:3000`.
+    * A aplicação se conectará à API do backend, que deve estar rodando na porta `5000`.
+
+***
 
 ## 🧭 Estrutura do Projeto
-
 ```
-/TrabalhoTopicos
+/
+├── Biblioteca/
+│   └── API/            # Contém todo o código do backend em .NET
+│       ├── Models/     # Entidades do domínio (Livro, Categoria)
+│       ├── Migrations/ # Migrações do Entity Framework
+│       └── Program.cs  # Configuração e endpoints da Minimal API
 │
-├── Models/              # Entidades do domínio
-├── Program.cs           # Configuração principal (Minimal API)
-├── README.md            # Documentação
-└── API.csproj
+└── Frontend/
+├── public/         # Arquivos estáticos e HTML base
+├── src/            # Código-fonte do frontend em React/TypeScript
+│   ├── components/ # Componentes reutilizáveis (Header, Footer)
+│   ├── models/     # Interfaces TypeScript (Livro, Categoria)
+│   └── pages/      # Páginas da aplicação (Home, Listar, Cadastrar)
+└── package.json    # Dependências e scripts do frontend
 ```
+---
+### Desenvolvedores
+
+* Eduardo Leal
+* Gabriel Barboza
+* Gabryel Rocha
+* Vinicius Coelho
