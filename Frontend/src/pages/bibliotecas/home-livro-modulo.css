@@ -1,40 +1,203 @@
+/* ==============================================
+   RESET CSS
+   ============================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+}
+
 /* Estilos básicos para o componente Home */
 .home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 40px 20px;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .home-title {
-  color: #333;
-  margin-bottom: 30px;
-  font-size: 2rem;
+  color: #28a745;
+  margin-bottom: 50px;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(40, 167, 69, 0.1);
+  letter-spacing: 1px;
 }
 
 .home-buttons {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .home-button {
-  padding: 12px 24px;
-  background-color: #4CAF50;
-  color: white;
+  padding: 18px 36px;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: #ffffff;
   border: none;
-  border-radius: 4px;
-  font-size: 1rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+  min-width: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.home-button:hover::before {
+  left: 100%;
 }
 
 .home-button:hover {
-  background-color: #45a049;
+  background: linear-gradient(135deg, #218838, #1da589);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
 }
 
 .home-button:active {
-  transform: scale(0.98);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* ==============================================
+   RESPONSIVIDADE
+   ============================================== */
+@media (max-width: 768px) {
+    .home-container {
+        min-height: 70vh;
+        padding: 30px 15px;
+    }
+
+    .home-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .home-buttons {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .home-button {
+        font-size: 1rem;
+        padding: 16px 32px;
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        min-height: 60vh;
+        padding: 20px 10px;
+    }
+
+    .home-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .home-button {
+        font-size: 0.9rem;
+        padding: 14px 28px;
+        min-width: 200px;
+    }
+}
+
+/* ==============================================
+   ANIMAÇÕES
+   ============================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+    }
+    50% {
+        box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+    }
+}
+
+.home-button {
+    animation: pulse 2s infinite;
+}
+
+.home-button:hover {
+    animation: none;
+}
+
+/* ==============================================
+   MELHORIAS VISUAIS
+   ============================================== */
+.home-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(40, 167, 69, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(32, 201, 151, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(40, 167, 69, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Efeitos de hover para todo o container */
+.home-container:hover .home-title {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Adiciona ícones aos botões (opcional) */
+.home-button[data-action="cadastrar"]::after {
+    content: " ➕";
+    margin-left: 8px;
+}
+
+.home-button[data-action="listar"]::after {
+    content: " 📚";
+    margin-left: 8px;
 }

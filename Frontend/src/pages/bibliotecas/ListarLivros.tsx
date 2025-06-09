@@ -34,7 +34,7 @@ function ListarLivros() {
         )
     }
        return (
-        <div>
+        <div className="lista-container">
             <h1>Lista de Livros</h1>
 
             <table>
@@ -45,6 +45,7 @@ function ListarLivros() {
                         <td>Ano de Publicação</td>
                         <td>Categoria ID</td>
                         <td>Categoria</td>
+                        <td>Ações</td>
                     </tr>
                 </thead>
                 <tbody>

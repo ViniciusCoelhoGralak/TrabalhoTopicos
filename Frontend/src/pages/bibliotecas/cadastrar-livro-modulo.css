@@ -1,112 +1,310 @@
-/* Resetando margens e preenchimentos padrão */
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, input, textarea, select, button {
+/* ==============================================
+   RESET CSS
+   ============================================== */
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+    box-sizing: border-box;
 }
 
-/* Container principal */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+}
+
+/* ==============================================
+   CONTAINER PRINCIPAL
+   ============================================== */
 .cad {
     max-width: 800px;
-    margin: 20px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
 }
 
-/* Título */
+/* ==============================================
+   TÍTULO
+   ============================================== */
 h1 {
     text-align: center;
-    color: #28a745; /* Cor verde Bootstrap */
-    margin-bottom: 30px;
+    color: #28a745;
+    margin-bottom: 40px;
     font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(40, 167, 69, 0.1);
 }
 
-/* Estilos do formulário */
+/* ==============================================
+   FORMULÁRIO
+   ============================================== */
 form {
     display: grid;
-    gap: 20px;
+    gap: 25px;
 }
 
-/* Estilos dos labels */
+/* ==============================================
+   LABELS
+   ============================================== */
 label {
     font-weight: 600;
-    color: #343a40; /* Cor de texto Bootstrap */
+    color: #495057;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 1rem;
 }
 
-/* Estilos dos campos de entrada */
+/* ==============================================
+   CAMPOS DE ENTRADA
+   ============================================== */
 input[type="text"],
 input[type="number"],
+input[type="email"],
+input[type="password"],
 textarea,
 select {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ced4da; /* Cor de borda Bootstrap */
-    border-radius: 6px;
+    padding: 14px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
     font-size: 1rem;
-    transition: border-color 0.3s ease-in-out;
-    box-sizing: border-box; /* Garante que o padding não aumenta o tamanho do elemento */
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    color: #495057;
 }
 
 input[type="text"]:focus,
 input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
 textarea:focus,
 select:focus {
-    border-color: #28a745; /* Cor verde Bootstrap */
+    border-color: #28a745;
     outline: none;
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Sombra verde */
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+    background-color: #ffffff;
 }
 
-/* Estilos do botão */
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+textarea:hover,
+select:hover {
+    border-color: #ced4da;
+}
+
+/* Estilo específico para textarea */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+/* ==============================================
+   BOTÕES
+   ============================================== */
 button {
-    padding: 14px 24px;
-    background-color: #28a745; /* Cor verde Bootstrap */
-    color: #fff;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: #ffffff;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #218838; /* Cor verde Bootstrap mais escura */
+    background: linear-gradient(135deg, #218838, #1da589);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
 }
 
 button:active {
-    background-color: #1e7e34; /* Cor verde Bootstrap ainda mais escura */
-    transform: translateY(1px); /* Efeito de pressionamento */
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(40, 167, 69, 0.2);
 }
 
-/* Estilos para mensagens de erro (opcional) */
+button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ==============================================
+   MENSAGENS DE ERRO
+   ============================================== */
 .error-message {
-    color: #dc3545; /* Cor vermelha Bootstrap */
-    font-size: 0.9rem;
-    margin-top: 5px;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* Media Queries para responsividade */
+.error-message::before {
+    content: "⚠️";
+    font-size: 1rem;
+}
+
+/* ==============================================
+   MENSAGENS DE SUCESSO
+   ============================================== */
+.success-message {
+    color: #155724;
+    font-size: 0.875rem;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.success-message::before {
+    content: "✅";
+    font-size: 1rem;
+}
+
+/* ==============================================
+   GRUPOS DE CAMPOS
+   ============================================== */
+.field-group {
+    display: grid;
+    gap: 15px;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* ==============================================
+   RESPONSIVIDADE
+   ============================================== */
 @media (max-width: 768px) {
     .cad {
-        padding: 20px;
+        margin: 20px 15px;
+        padding: 25px 20px;
     }
 
     h1 {
         font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .field-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     input[type="text"],
     input[type="number"],
+    input[type="email"],
+    input[type="password"],
     textarea,
     select {
-        font-size: 0.9rem;
+        font-size: 16px; /* Evita zoom no iOS */
+        padding: 12px 14px;
     }
 
     button {
         font-size: 1rem;
+        padding: 14px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cad {
+        margin: 10px;
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    form {
+        gap: 20px;
+    }
+}
+
+/* ==============================================
+   ANIMAÇÕES E MELHORIAS VISUAIS
+   ============================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cad {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Indicador de campo obrigatório */
+.required::after {
+    content: " *";
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Melhorias para acessibilidade */
+input:invalid {
+    border-color: #dc3545;
+}
+
+input:valid {
+    border-color: #28a745;
+}
+
+/* Loading state para botões */
+.loading {
+    position: relative;
+    color: transparent;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }

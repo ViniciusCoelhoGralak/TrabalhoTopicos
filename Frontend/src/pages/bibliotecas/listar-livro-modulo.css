@@ -1,81 +1,345 @@
-h1 {
-    color: #444;
-    margin-bottom: 20px;
+/* ==============================================
+   RESET CSS
+   ============================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Estilo da tabela */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+}
+
+/* ==============================================
+   CONTAINER PRINCIPAL
+   ============================================== */
+.lista-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* ==============================================
+   TÍTULO
+   ============================================== */
+h1 {
+    text-align: center;
+    color: #28a745;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(40, 167, 69, 0.1);
+}
+
+/* ==============================================
+   TABELA
+   ============================================== */
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
 }
 
-/* Cabeçalho da tabela */
+/* ==============================================
+   CABEÇALHO DA TABELA
+   ============================================== */
 thead {
-    background-color: #e0e0e0;
+    background: linear-gradient(135deg, #28a745, #20c997);
 }
 
 thead td {
-    font-weight: bold;
-    padding: 10px;
-    border: 1px solid #ccc;
+    font-weight: 700;
+    padding: 16px 12px;
+    color: #ffffff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
 }
 
-/* Corpo da tabela */
+/* ==============================================
+   CORPO DA TABELA
+   ============================================== */
 tbody td {
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 14px 12px;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.95rem;
+    color: #495057;
+    vertical-align: middle;
 }
 
 /* Linhas alternadas */
 tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f8f9fa;
 }
 
 tbody tr:hover {
-    background-color: #ececec;
+    background-color: #e8f5e8;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
 }
 
-/* Botões */
-/* Estilo geral dos botões */
-button {
+/* ==============================================
+   AÇÕES DA TABELA - CONTAINER PARA ALINHAMENTO
+   ============================================== */
+.table-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* ==============================================
+   BOTÕES - ESTILOS BASE COMPARTILHADOS
+   ============================================== */
+button,
+.table-actions a,
+tbody td a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 16px;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 0.875rem;
+    font-weight: 600;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    line-height: 1;
+    min-height: 36px; /* Altura mínima igual para todos */
+    box-sizing: border-box;
+}
+
+/* ==============================================
+   BOTÃO REMOVER
+   ============================================== */
+button.remover {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
     margin-right: 8px;
 }
 
-/* Botão Remover (vermelho) */
-button.remover {
-    background-color: #e74c3c; /* Vermelho */
-    color: white;
+button.remover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+button.remover:hover::before {
+    left: 100%;
 }
 
 button.remover:hover {
-    background-color: #c0392b; /* Vermelho escuro */
+    background: linear-gradient(135deg, #c82333, #a71e2a);
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
 }
 
 button.remover:active {
-    transform: translateY(2px);
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
 }
 
-/* Botão Alterar (azul) */
-button.alterar {
-    background-color: #2980b9; /* Azul */
-    color: white;
+/* ==============================================
+   BOTÃO ALTERAR - APENAS DENTRO DA TABELA
+   ============================================== */
+.table-actions a,
+tbody td a {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
 }
 
-button.alterar:hover {
-    background-color: #1c5980; /* Azul escuro */
+.table-actions a::before,
+tbody td a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.table-actions a:hover::before,
+tbody td a:hover::before {
+    left: 100%;
+}
+
+.table-actions a:hover,
+tbody td a:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
 }
 
-button.alterar:active {
-    transform: translateY(2px);
+.table-actions a:active,
+tbody td a:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* ==============================================
+   RESPONSIVIDADE
+   ============================================== */
+@media (max-width: 768px) {
+    .lista-container {
+        margin: 20px 15px;
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    table {
+        font-size: 0.875rem;
+    }
+
+    thead td {
+        padding: 12px 8px;
+        font-size: 0.875rem;
+    }
+
+    tbody td {
+        padding: 12px 8px;
+    }
+
+    button, .table-actions a, tbody td a {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        min-height: 32px;
+    }
+
+    .table-actions {
+        gap: 6px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button.remover {
+        margin-right: 0;
+        margin-bottom: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lista-container {
+        margin: 10px;
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    thead td {
+        padding: 10px 6px;
+        font-size: 0.8rem;
+    }
+
+    tbody td {
+        padding: 10px 6px;
+    }
+
+    /* Esconde algumas colunas em telas muito pequenas */
+    table td:nth-child(4),
+    table td:nth-child(5) {
+        display: none;
+    }
+
+    button, .table-actions a, tbody td a {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+        min-height: 30px;
+    }
+}
+
+/* ==============================================
+   ANIMAÇÕES
+   ============================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação para linhas da tabela */
+tbody tr {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ==============================================
+   MELHORIAS VISUAIS
+   ============================================== */
+/* Efeito de carregamento */
+.loading-table {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Estado vazio */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6c757d;
+}
+
+.empty-state h3 {
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+/* Hover effect para toda a linha */
+tbody tr:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.1);
 }

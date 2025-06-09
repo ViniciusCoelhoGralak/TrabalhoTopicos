@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kabum\\Downloads\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj": {}
+    "C:\\Users\\LEAL\\Documents\\Projects\\bbbbb\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kabum\\Downloads\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj": {
+    "C:\\Users\\LEAL\\Documents\\Projects\\bbbbb\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kabum\\Downloads\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\LEAL\\Documents\\Projects\\bbbbb\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Kabum\\Downloads\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\Kabum\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kabum\\Downloads\\TrabalhoTopicos\\Biblioteca\\API\\obj\\",
+        "projectPath": "C:\\Users\\LEAL\\Documents\\Projects\\bbbbb\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\LEAL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LEAL\\Documents\\Projects\\bbbbb\\TrabalhoTopicos\\Biblioteca\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kabum\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\LEAL\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
