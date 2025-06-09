@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from './pages/bibliotecas/Home';
 import CadastrarLivro from "./pages/bibliotecas/CadastrarLivro";
 import ListarLivros from "./pages/bibliotecas/ListarLivros";
+import Footer from "./components/Footer";
 //1 - Um componente SEMPRE deve começar com a primeira letra
 //maiúscula
 //2 - Todo componente DEVE ser uma função do JS
@@ -20,6 +21,7 @@ function App() {
           <Route path="/pages/livros/cadastrar" element={<CadastrarLivro />} />
           <Route path="/pages/livros/alterar/:id" element={<CadastrarLivro />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

@@ -1,37 +1,46 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos do cabeçalho */
 header {
-  background-color: #333;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
 }
 
 .logo {
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .nav-links {
-  list-style-type: none;
-  display: flex;
-  gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
 }
 
-.nav-links li {
-  display: inline;
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #f0a500;
+.nav-links li a:hover {
+    text-decoration: underline;
 }

@@ -1,22 +1,41 @@
 /* Resetando margens e preenchimentos padrão */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, input, textarea, select, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
 /* Container principal */
 .cad {
-    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Título */
 h1 {
     text-align: center;
-    color: #4CAF50;
-    margin-bottom: 20px;
+    color: #28a745; /* Cor verde Bootstrap */
+    margin-bottom: 30px;
+    font-size: 2.5rem;
 }
 
 /* Estilos do formulário */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: grid;
+    gap: 20px;
+}
+
+/* Estilos dos labels */
+label {
+    font-weight: 600;
+    color: #343a40; /* Cor de texto Bootstrap */
 }
 
 /* Estilos dos campos de entrada */
@@ -25,56 +44,69 @@ input[type="number"],
 textarea,
 select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    transition: border-color 0.3s;
+    padding: 12px;
+    border: 1px solid #ced4da; /* Cor de borda Bootstrap */
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+    box-sizing: border-box; /* Garante que o padding não aumenta o tamanho do elemento */
 }
 
 input[type="text"]:focus,
 input[type="number"]:focus,
 textarea:focus,
 select:focus {
-    border-color: #4CAF50;
+    border-color: #28a745; /* Cor verde Bootstrap */
     outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Sombra verde */
 }
 
 /* Estilos do botão */
 button {
-    padding: 12px;
-    background-color: #4CAF50;
+    padding: 14px 24px;
+    background-color: #28a745; /* Cor verde Bootstrap */
     color: #fff;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #218838; /* Cor verde Bootstrap mais escura */
+}
+
+button:active {
+    background-color: #1e7e34; /* Cor verde Bootstrap ainda mais escura */
+    transform: translateY(1px); /* Efeito de pressionamento */
+}
+
+/* Estilos para mensagens de erro (opcional) */
+.error-message {
+    color: #dc3545; /* Cor vermelha Bootstrap */
+    font-size: 0.9rem;
+    margin-top: 5px;
 }
 
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
-    div {
-        padding: 15px;
-        width: 100%;
+    .cad {
+        padding: 20px;
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 2rem;
     }
 
     input[type="text"],
     input[type="number"],
     textarea,
     select {
-        font-size: 16px;
+        font-size: 0.9rem;
     }
 
     button {
-        font-size: 18px;
+        font-size: 1rem;
     }
 }
