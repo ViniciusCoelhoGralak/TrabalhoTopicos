@@ -106,6 +106,7 @@ function CadastrarLivro() {
                         onChange={(e: any) => setAnoPublicacao(e.target.value)}
                         value={anoPublicacao}
                         type="number"
+                        min="1"
                         id="anoPublicacao"
                         step="1"
                         placeholder="Digite o ano de publicação do livro"

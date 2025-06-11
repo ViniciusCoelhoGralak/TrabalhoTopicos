@@ -3605,11 +3605,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LEAL\\Documents\\Projects\\bbbbb\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\LEAL\\Documents\\Projects\\trabson\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\LEAL\\Documents\\Projects\\bbbbb\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
+      "projectPath": "C:\\Users\\LEAL\\Documents\\Projects\\trabson\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
       "packagesPath": "C:\\Users\\LEAL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LEAL\\Documents\\Projects\\bbbbb\\TrabalhoTopicos\\Biblioteca\\API\\obj\\",
+      "outputPath": "C:\\Users\\LEAL\\Documents\\Projects\\trabson\\TrabalhoTopicos\\Biblioteca\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LEAL\\AppData\\Roaming\\NuGet\\NuGet.Config"

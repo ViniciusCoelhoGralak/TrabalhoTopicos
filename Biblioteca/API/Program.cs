@@ -86,6 +86,11 @@ app.MapPost("/api/livros", ([FromBody] Livro livro, [FromServices] AppDataContex
         return Results.BadRequest("Titulo do livro deve ter mais de 3 letras");
     }
 
+    if (livro.AnoPublicacao <= 0)
+    {
+        return Results.BadRequest("Ano de publicação não pode ser menor ou igual a zero");
+    }
+
     ctx.Livros.Add(livro);
     ctx.SaveChanges();
     return Results.Created("", livro);

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a1JIvvPBI04=",
+  "dgSpecHash": "Jivu909vM58=",
   "success": true,
-  "projectFilePath": "C:\\Users\\LEAL\\Documents\\Projects\\bbbbb\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\LEAL\\Documents\\Projects\\trabson\\TrabalhoTopicos\\Biblioteca\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LEAL\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\LEAL\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
